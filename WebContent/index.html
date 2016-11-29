@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="lib/angular.min.js"></script> 
+ <script type="text/javascript" src="lib/angular-route.min.js"></script>
+
+ <script src="js/SignUp.js"></script>
+ <script src="HomeCntrl.js"></script>
+ 
+</head>
+
+<!-- define angular controller -->
+<body data-ng-app="myApp">
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#/">COLLAB</a>
+      </div>
+
+      <ul>
+      <li><a href="#/">Home</a></li>
+      <li><a href="#/Login">Login</a></li>
+      <li><a href="#/register">SignUp</a></li>
+        <!-- <li><a href="#/Home"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="#login"><i class="fa fa-shield"></i> Login</a></li>
+        <li><a href="#/register"><i class="fa fa-comment"></i> Sign Up</a></li>
+        <li><a href="#blog"><i class="fa fa-shield"></i> Blog</a></li>
+        <li><a href="#forum"><i class="fa fa-comment"></i> Forum</a></li> -->
+</ul>
+    </div>
+  </nav>
+
+  	
+    <!-- angular templating -->
+		<!-- this is where content will be injected -->
+    <div data-ng-view></div>
+   
+</body>
+</html>
