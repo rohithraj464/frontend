@@ -1,6 +1,6 @@
 app.service('JobService',['$http',function($http){
 	
-	var BASE_URL = 'http://localhost:8081/collabbackend'
+	var BASE_URL = 'http://localhost:8081/CollabServer/'
 		var self=this
 		self.job = {id:"",title:""}
 	    self.jobs = []
