@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="lib/angular.min.js"></script> 
+ <script type="text/javascript" src="lib/angular-route.min.js"></script>
+ <script type="text/javascript" src="lib/angular-cookies.js"></script>
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.1/sockjs.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+<script type="text/javascript" src="js/ChatCtrl.js"></script>
+<script type="text/javascript" src="js/ChatService.js"></script>
+</head>
+<body data-ng-app="myApp">
+<div data-ng-controller="chatController">
+<form data-ng-submit="addMessage()" name="messageForm" align="center">
+<input type="text" placeholder="Enter new Message" data-ng-model="message">
+<input type="submit" value="send">
+</form>
+<p data-ng-repeat="message in messages | orderBy:'time':true" >
+<time>{{message.time | date:'HH:mm'}}</time>
+<span >{{message.message}}</span>
+</p>
+</div>
+</body>
+</html>
